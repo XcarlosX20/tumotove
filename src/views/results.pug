@@ -1,0 +1,9 @@
+extends layout
+block content
+    a(href="/") volver a buscar
+    p #{title}
+    if (motos.length === 0) 
+        p 'No se han encontrado motos que concuerden con los parametros de busqueda
+    ul
+        each moto in motos
+            li #{moto.marca} #{moto.modelo}

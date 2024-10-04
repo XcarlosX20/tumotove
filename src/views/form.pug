@@ -1,0 +1,96 @@
+extends layout
+block content
+    legend filtrar por caracteristicas
+    form(  method="post" id="form-search") 
+                    label rango de precio ($USD)
+                    input(type="number" name="precioMin" placeholder="precio minimo")
+                    input(type="number" name="precioMax" placeholder="precio maximo")
+                    label Marca 
+                    select(name="marca")
+                        option(value="") Seleccione 
+                        each marca in marcas
+                            option(value=marca)= marca 
+                    label cilindrada (cc)
+                    input(type="number", name="cilindrada")
+                    label segmento 
+                    select(name="segmento") 
+                        option(value="") Seleccione
+                        option(value="paseo standard") paseo standard
+                        option(value="scooter") scooter    
+                        option(value="enduro") enduro
+                        option(value="racing") racing    
+                        option(value="naked") naked
+                        option(value="adventure") adventure 
+                    label barras de suspencion
+                    select(name="barrasSuspension")
+                        option(value="") Seleccione
+                        option(value="invertidas") invertidas
+                        option(value="telescopicas") telescopicas 
+                    label frenos traseros
+                    select(name="frenoTrasero")
+                        option(value="") Seleccione
+                        option(value="banda") banda
+                        option(value="disco") disco
+                    label frenos delanteros
+                    select(name="frenoDelantero")
+                        option(value="") Seleccione
+                        option(value="banda") banda
+                        option(value="disco") disco
+                    label tipo de rines
+                    select(name="tipoRines")
+                        option(value="") Seleccione
+                        option(value="rayos") rayos
+                        option(value="paleta") paleta
+                    label tamaño del rin trasero (pulgadas)
+                    select(name="tamañoRinTrasero")
+                        option(value="") Seleccione
+                        option(value="12") 12
+                        option(value="13") 13
+                        option(value="14") 14
+                        option(value="15") 15
+                        option(value="16") 16
+                        option(value="17") 17
+                        option(value="18") 18
+                        option(value="19") 19
+                        option(value="20") 20
+                        option(value="21") 21
+                    label tamaño del rin trasero (pulgadas)
+                    select(name="tamañoRinDelantero")
+                        option(value="") Seleccione
+                        option(value="12") 12
+                        option(value="13") 13
+                        option(value="14") 14
+                        option(value="15") 15
+                        option(value="16") 16
+                        option(value="17") 17
+                        option(value="18") 18
+                        option(value="19") 19
+                        option(value="20") 20
+                        option(value="21") 21
+                    label tipo de distribucion de motor
+                    select(name="tipoMotor")
+                        option(value="") Seleccione
+                        option(value="cadenero") cadenero
+                        option(value="varillero") varillero
+                    label Sistema de enfriamiento
+                    select(name="enfriamiento")
+                        option(value="") Seleccione
+                        option(value="aire") aire 
+                        option(value="radiador") radiador de aceite 
+                    label Sistema de combustion
+                    select(name="sistemacombustion") 
+                        option(value="") Seleccione
+                        option(value="carburado") carburado
+                        option(value="inyeccion") inyeccion
+                    label Conexion USB 
+                    input(type="checkbox", name="conexionusb")
+                    label frenos ABS
+                    input(type="checkbox", name="frenosABS")
+                    label contrapeso
+                    input(type="checkbox", name="contrapesomotor")
+                    label tacometro
+                    select(name="tacometro") 
+                        option(value="") Seleccione
+                        option(value="digital") digital
+                        option(value="analogico") analogico
+                    input(type="submit", value="Buscar")
